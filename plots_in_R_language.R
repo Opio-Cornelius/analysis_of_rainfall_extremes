@@ -24,7 +24,7 @@ pthree <- ggplot(data_cyc, aes(x=day, y=rain, color=region)) + labs(x="Time (day
 pthree + scale_color_manual(values = c("#E7B800", "#00AFBB", "green4")) + theme(legend.title = element_blank()) + guides(color = guide_legend(override.aes = list(size = 1.3))) + scale_x_continuous(breaks = seq(0,92,30)) + theme(legend.position="bottom")
 
 ##### For single versions #######
-p_cyc_west <- ggplot(data_cyc_west, aes(x=data_cyc_west$ï..day, y=rain)) + labs(x="Time (days)", y="Rainfall (mm/day)") + geom_line(size = 3, colour = "#E7B800")
+p_cyc_west <- ggplot(data_cyc_west, aes(x=data_cyc_west$Ã¯..day, y=rain)) + labs(x="Time (days)", y="Rainfall (mm/day)") + geom_line(size = 3, colour = "#E7B800")
 p_cyc_west + scale_x_continuous(breaks = seq(0,92,30)) + coord_cartesian(ylim=c(0,12)) + geom_smooth(method = 'lm', formula = y ~ x, colour ="black", linetype = "dashed", se = FALSE)
 
 
@@ -37,7 +37,7 @@ p_an_ce + theme(legend.title = element_blank()) + scale_x_continuous(breaks = se
 
 ###### Slight changes for anomaly box plots (normalized) #############
 
-> p_an_ea <- ggplot(data_an_ea, aes(x=data_an_ea$ï..year, y=rain, fill=month)) + labs(x="Time (years)", y="Rainfall Anomaly (mm/day)") + geom_bar(stat = "identity")
+> p_an_ea <- ggplot(data_an_ea, aes(x=data_an_ea$Ã¯..year, y=rain, fill=month)) + labs(x="Time (years)", y="Rainfall Anomaly (mm/day)") + geom_bar(stat = "identity")
 > p_an_ea + theme(legend.title = element_blank()) + scale_x_continuous(breaks = seq(1998,2017,2)) + coord_cartesian(ylim=c(-5,4)
 
 ####### Emergency jitter plot with intercepts) #######
